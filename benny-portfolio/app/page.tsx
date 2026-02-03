@@ -223,7 +223,7 @@ export default function Portfolio() {
               CS & Business @ UBC
             </h2>
             <p className="leading-relaxed max-w-md text-neutral-400">
-              Building scalable cloud systems and financial analysis tools.
+              Building scalable systems and financial analysis tools.
               {/* Currently optimizing distributed workflows at Amazon. */}
             </p>
           </div>
