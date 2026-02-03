@@ -211,7 +211,7 @@ export default function Portfolio() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-20 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-12">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-4 md:py-20 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-12">
         {/* LEFT COLUMN: HERO / BIO / STICKY NAV */}
         <div className="lg:sticky lg:top-20 lg:h-fit flex flex-col gap-8">
           {/* HEADER */}
