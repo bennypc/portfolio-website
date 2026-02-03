@@ -406,7 +406,7 @@ export default function Portfolio() {
           {/* FOOTER */}
           <footer className="pt-8 border-t border-neutral-900 flex justify-between items-center text-xs text-neutral-600 font-mono">
             <p>© 2026 Benny Chinvanich</p>
-            <p>Built with Next.js & Tailwind</p>
+            {/* <p>Built with Next.js & Tailwind</p> */}
           </footer>
         </div>
       </div>
