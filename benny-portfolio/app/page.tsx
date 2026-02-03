@@ -211,74 +211,122 @@ export default function Portfolio() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-20 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 md:py-20 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-12">
         {/* LEFT COLUMN: HERO / BIO / STICKY NAV */}
         <div className="lg:sticky lg:top-20 lg:h-fit flex flex-col gap-8">
           {/* HEADER */}
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-100">
-              Benny Chinvanich
-            </h1>
-            <h2 className="text-lg md:text-xl font-medium text-neutral-200">
-              CS & Business @ UBC
-            </h2>
-            <p className="leading-relaxed max-w-md text-neutral-400">
-              Building scalable systems and financial analysis tools.
-              {/* Currently optimizing distributed workflows at Amazon. */}
-            </p>
+          <div className="relative">
+            {/* subtle terminal rail (not a card) */}
+            <div className="absolute -left-4 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/40 via-neutral-800 to-transparent" />
+            <div className="absolute -left-4 top-6 h-10 w-px bg-emerald-400/60 animate-pulse" />
+
+            <div className="space-y-4">
+              {/* small label row */}
+              <div className="flex items-center gap-3 text-xs font-mono text-neutral-500">
+                <span>PROFILE</span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-100">
+                Benny Chinvanich
+              </h1>
+
+              <h2 className="text-lg md:text-xl font-medium text-neutral-200">
+                Software Engineer
+              </h2>
+
+              {/* DESCRIPTION (rewritten below) */}
+              <p className="leading-relaxed max-w-md text-neutral-400">
+                I’m a CS + Business student at UBC (graduating May 2026). I
+                started out with a simple rule. &quot;Build cool things&quot;.
+                Over time it became: &quot;Build cool things that actually
+                matter.&quot; <br /> <br />
+                I’m drawn to systems work where reliability and performance show
+                up in real ways, and this site is a curated set of the projects
+                and work I’m proud of.
+              </p>
+            </div>
           </div>
 
-          {/* METADATA / STATUS */}
-          <div className="flex flex-col gap-3 font-mono text-xs">
+          {/* METADATA / STATUS (key/value style) */}
+          <div className="flex flex-col gap-2 font-mono text-xs">
             <div className="flex items-center gap-2 text-emerald-500">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              AVAILABLE FOR SUMMER 2026
+              <span className="tracking-wide">AVAILABLE:</span>
+              <span className="text-neutral-200">SUMMER 2026</span>
             </div>
+
             <div className="flex items-center gap-2 text-neutral-500">
               <span className="w-2 h-2 border border-neutral-700 rounded-full"></span>
-              VANCOUVER, BC ({time} PST)
+              <span className="tracking-wide">LOCATION:</span>
+              <span className="text-neutral-200">VANCOUVER, BC</span>
+              <span className="text-neutral-700">•</span>
+              <span className="text-neutral-400">{time} PST</span>
             </div>
           </div>
 
-          {/* NAVIGATION LINKS */}
-          <nav className="flex flex-wrap gap-4">
+          {/* NAVIGATION LINKS (command-style) */}
+          <nav className="flex flex-col gap-3">
             <a
               href="https://github.com/bennypc/"
               target="_blank"
-              className="group flex items-center gap-2 text-sm font-medium hover:text-emerald-400 transition-colors"
+              className="group flex items-center gap-3 text-sm font-medium text-neutral-200 hover:text-emerald-400 transition-colors w-fit"
             >
-              <Github size={18} />
+              <span className="font-mono text-neutral-500 group-hover:text-neutral-400">
+                $
+              </span>
+              <Github
+                size={18}
+                className="text-neutral-400 group-hover:text-emerald-400 transition-colors"
+              />
+              <span className="font-mono">open</span>
               <span className="border-b border-transparent group-hover:border-emerald-400 transition-colors">
-                GitHub
+                github
               </span>
             </a>
+
             <a
               href="https://linkedin.com/in/benny-chinvanich/"
               target="_blank"
-              className="group flex items-center gap-2 text-sm font-medium hover:text-emerald-400 transition-colors"
+              className="group flex items-center gap-3 text-sm font-medium text-neutral-200 hover:text-emerald-400 transition-colors w-fit"
             >
-              <Linkedin size={18} />
+              <span className="font-mono text-neutral-500 group-hover:text-neutral-400">
+                $
+              </span>
+              <Linkedin
+                size={18}
+                className="text-neutral-400 group-hover:text-emerald-400 transition-colors"
+              />
+              <span className="font-mono">open</span>
               <span className="border-b border-transparent group-hover:border-emerald-400 transition-colors">
-                LinkedIn
+                linkedin
               </span>
             </a>
+
             <a
               href="mailto:benny.pincha@gmail.com"
-              className="group flex items-center gap-2 text-sm font-medium hover:text-emerald-400 transition-colors"
+              className="group flex items-center gap-3 text-sm font-medium text-neutral-200 hover:text-emerald-400 transition-colors w-fit"
             >
-              <Mail size={18} />
+              <span className="font-mono text-neutral-500 group-hover:text-neutral-400">
+                $
+              </span>
+              <Mail
+                size={18}
+                className="text-neutral-400 group-hover:text-emerald-400 transition-colors"
+              />
+              <span className="font-mono">compose</span>
               <span className="border-b border-transparent group-hover:border-emerald-400 transition-colors">
-                Email
+                email
               </span>
             </a>
           </nav>
 
+          {/* RESUME CTA */}
           <a
             href="/BennyChinvanich_Resume.pdf"
-            className="inline-flex items-center justify-center gap-2 bg-neutral-100 hover:bg-white text-neutral-900 px-4 py-2 rounded-lg text-sm font-bold transition-all w-fit mt-4"
+            className="inline-flex items-center justify-center gap-2 bg-neutral-100 hover:bg-white text-neutral-900 px-4 py-2 rounded-lg text-sm font-bold transition-all w-fit"
           >
             <Download size={16} /> Resume PDF
           </a>
